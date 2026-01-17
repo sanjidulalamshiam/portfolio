@@ -2,30 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
 <link rel="icon" href="https://cdn.vectorstock.com/i/1000v/85/01/golden-ss-monogram-logo-luxury-initial-vector-44808501.jpg">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Explore about Sanjidul Shiam | Semantic SEO & Automation Enthusiast | Make your website Smarter & Scale Better">
 <title>Sanjidul Shiam | Holistic SEO Enthusiast</title>
 <script src="https://cdn.tailwindcss.com"></script>
-
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
 body { font-family: 'Inter', sans-serif; }
-.animate-spin { animation: spin 1s linear infinite; }
-@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 html { scroll-behavior: smooth; }
+
 /* Markdown Styles */
 .markdown-prose ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
 .markdown-prose ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 1rem; }
@@ -34,116 +25,141 @@ html { scroll-behavior: smooth; }
 .markdown-prose strong { color: #38bdf8; }
 .markdown-prose pre { background-color: #1e293b; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-top: 1rem; border: 1px solid #334155; }
 .markdown-prose code { font-family: monospace; color: #e2e8f0; }
+
+/* Floating image animation */
+@keyframes float {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.45);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-12px);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.floating-img {
+  animation: float 6s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+/* Mobile: no animation */
+@media (max-width: 1024px) {
+  .floating-img {
+    animation: none;
+  }
+}
+
+
 </style>
-<meta name="google-site-verification" content="mFJMm-9Pte1WDC3idsNaWFTwLObMu5V8AE9c2k3QpTs" />
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E8FBHMDHHT"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-
-gtag('config', 'G-E8FBHMDHHT');
-</script>
-
-
 </head>
 
+<body class="bg-slate-900">
 
+<!-- NAVBAR (UNCHANGED) -->
+<!-- NAVBAR -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-[#111B34]">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-
-
-
-<body class="bg-slate-50">
-
-
-<!-- Navigation -->
-<nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-5">
-<div class="container mx-auto px-6 flex justify-between items-center">
-<div class="flex items-center gap-2">
-<div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">S</div>
-<span
-  id="nav-title"
-  class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 transition-all duration-300"
->
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="h-9 w-9 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold">
+        S
+      </div>
+      <span class="font-extrabold text-lg bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
   Sanjidul Shiam
 </span>
 
-</div>
 
 
-<div id="nav-links" class="hidden md:flex gap-8 text-slate-200">
-<a href="#about" class="hover:text-blue-500 transition-colors">About</a>
-<a href="#tools" class="hover:text-blue-500 transition-colors">✨ Tools</a>
-<a href="#achievements" class="hover:text-blue-500 transition-colors">Achievements</a>
-<a href="#expertise" class="hover:text-blue-500 transition-colors">Expertise</a>
-<a href="#experience" class="hover:text-blue-500 transition-colors">Experience</a>
-</div>
+    </div>
 
+    <!-- Menu -->
+    <ul class="hidden md:flex items-center gap-8 text-slate-200 font-medium">
+      <li><a href="#about" class="hover:text-white">About</a></li>
+      <li><a href="#tools" class="hover:text-white">✨ Tools</a></li>
+      <li><a href="#achievements" class="hover:text-white">Achievements</a></li>
+      <li><a href="#expertise" class="hover:text-white">Expertise</a></li>
+      <li><a href="#experience" class="hover:text-white">Experience</a></li>
+    </ul>
 
-<div class="hidden md:block">
-<a href="https://www.linkedin.com/in/sanjidul-alam-shiam/" class="px-6 py-2 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg">Contact Me</a>
-</div>
+    <!-- CTA -->
+    <a href="https://www.linkedin.com/in/sanjidul-alam-shiam/"
+       class="hidden md:inline-flex bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-500 transition">
+      Contact Me
+    </a>
 
-
-<button id="mobile-menu-btn" class="md:hidden text-slate-900 focus:outline-none">
-<svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-</button>
-</div>
-
-
-<div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-xl py-6 px-6 flex flex-col gap-4 border-t border-slate-100">
-<a href="#about" class="text-slate-600 font-medium text-lg">About</a>
-<a href="#tools" class="text-slate-600 font-medium text-lg">✨ AI Tools</a>
-<a href="#achievements" class="text-slate-600 font-medium text-lg">Achievements</a>
-<a href="#expertise" class="text-slate-600 font-medium text-lg">Expertise</a>
-<a href="#experience" class="text-slate-600 font-medium text-lg">Experience</a>
-<a href="#contact" class="mt-2 text-center py-3 bg-blue-600 text-white rounded-lg font-medium">Contact Me</a>
-</div>
+  </div>
 </nav>
 
 
-<!-- Hero Section -->
-<header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-900">
-<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-900/20 to-transparent pointer-events-none"></div>
-<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none"></div>
 
 
-<div class="container mx-auto px-6 relative z-10">
-<div class="max-w-4xl">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-700/50 text-cyan-200 text-sm font-medium mb-6">
-<span>⚡</span>
-<span>Holistic SEO & Automation Enthusiast</span>
-</div>
+
+<!-- ================= HERO SECTION (FIXED) ================= -->
+<header class="relative bg-slate-900 overflow-hidden pt-20 pb-24">
 
 
-<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-Machine Learning Meets <br />
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Semantic SEO</span>
-</h1>
+
+  <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-transparent"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT COLUMN -->
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-700/50 text-cyan-200 text-sm font-medium mb-6">
+          ⚡ Holistic SEO & Automation Enthusiast
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+          Machine Learning Meets <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+            Semantic SEO
+          </span>
+        </h1>
+
+        <p class="text-xl text-slate-300 mb-8 max-w-xl leading-relaxed">
+          I don't just "do SEO"; I engineer it. Leveraging Harvard-level data analytics and Python automation
+          to dominate Map Packs and organic growth.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://www.linkedin.com/in/sanjidul-alam-shiam/" class="px-8 py-4 bg-blue-600 rounded-lg font-bold text-white">
+            Start Ranking →
+          </a>
+          <a href="https://www.linkedin.com/in/sanjidul-alam-shiam/" target="_blank"
+             class="px-8 py-4 bg-slate-800 border border-slate-700 rounded-lg font-bold text-white">
+            LinkedIn Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN (THIS WAS YOUR ISSUE) -->
+      <div class="hidden lg:block relative h-[520px] w-full max-w-[520px] ml-32 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-2xl shadow-xl">
 
 
-<p class="text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
-I don't just "do SEO"; I engineer it. Leveraging Harvard-level data analytics and Python automation to drive Map Pack dominance and organic growth for construction and service-area businesses.
-</p>
+        <!-- glow -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-emerald-400/20 rounded-2xl"></div>
 
+        <!-- image -->
+     <img
+  src="https://media.licdn.com/dms/image/v2/D5603AQFhsEq-rH5oAA/profile-displayphoto-crop_800_800/B56ZgNGehSG0AM-/0/1752566459019?e=1769040000&v=beta&t=2gkA8Cq4MoY6pGI11gAA-oVOFw19FysaZFfcd6DqVVA"
+  alt="Shiam"
+  class="absolute top-1/2 left-1/2
+         -translate-x-1/2 -translate-y-1/2
+         w-[380px] h-[420px]
+         object-cover rounded-xl
+         border border-slate-700
+         shadow-2xl floating-img"
+/>
 
-<div class="flex flex-col sm:flex-row gap-4">
-<a href="#contact" class="px-8 py-4 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-900/50 text-center">
-Start Ranking →
-</a>
-<a href="https://www.linkedin.com/in/sanjidul-alam-shiam/" target="_blank" class="px-8 py-4 bg-slate-800 text-white border border-slate-700 rounded-lg font-bold hover:bg-slate-700 transition-all text-center">
-LinkedIn Profile
-</a>
-</div>
-</div>
-</div>
+      </div>
+
+    </div>
+  </div>
 </header>
+<!-- ================= END HERO ================= -->
 
 
 <!-- Stats Section -->
@@ -773,49 +789,6 @@ menu.classList.toggle('hidden');
 });
 
 
-// --- Navbar Scroll Effect ---
-const navbar = document.getElementById('navbar');
-const navLinks = document.getElementById('nav-links');
-const navTitle = document.getElementById('nav-title');
-
-function updateNavbar() {
-  if (window.scrollY > 20) {
-    // SCROLLED STATE (CYAN)
-    navbar.classList.remove('bg-transparent', 'py-5');
-    navbar.classList.add(
-      'bg-[#111B34]/90',
-      'backdrop-blur-md',
-      'shadow-md',
-      'py-3'
-    );
-
-    navLinks.classList.remove('text-slate-200');
-    navLinks.classList.add('text-white');
-
-    
-  } else {
-    // TOP STATE
-    navbar.classList.add('bg-transparent', 'py-5');
-    navbar.classList.remove(
-      'bg-[#111B34]/90',
-      'backdrop-blur-md',
-      'shadow-md',
-      'py-3'
-    );
-
-    navLinks.classList.add('text-slate-200');
-    navLinks.classList.remove('text-white');
-
-    
-  }
-}
-
-// ✅ NO DELAY FIX
-document.addEventListener('DOMContentLoaded', updateNavbar);
-window.addEventListener('scroll', updateNavbar);
-
-
-
 // --- AI Tool Logic ---
 let currentTool = 'cluster';
 
@@ -959,11 +932,5 @@ btnText.innerHTML = originalText;
 </script>
 </body>
 </html>
-
-
-
-
-
-
 
 
